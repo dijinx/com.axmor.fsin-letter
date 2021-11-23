@@ -25,8 +25,8 @@ public class BasePage {
 
     //Actions
     //открыть страницу
-    public void BaseOpen(){
-        driver.get(USER_URL);
+    public void BaseOpen(String URL){
+        driver.get(URL);
     }
 
     //Авторизоваться в качестве цензора

@@ -31,12 +31,9 @@ public class CensorAuthPage extends BasePage {
     public void open() {
         login();
     }
-    //внести текст
-//    public void sendText(){
-//       BaseSendText(By.xpath("r"), "r");
-//    }
+
     //проверить текущий адрес страницы
-    public void checkUrl(){
+    public void checkUrl() {
         BaseCheckUrl(CENSOR_SUCCESSFULLY_AUTH_URL);
     }
     //Actions_end
