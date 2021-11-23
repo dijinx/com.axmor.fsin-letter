@@ -28,6 +28,8 @@ public class UserSendLetterTest extends TestBase {
         Thread.sleep(2000);
         page.pressButtonSendLetter();
         page.pressButtonPayLetter();
+        //check
+        page.checkLetterIsSend();
 
 
     }

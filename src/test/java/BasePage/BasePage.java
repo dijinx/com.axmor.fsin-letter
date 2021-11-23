@@ -5,6 +5,8 @@ import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BasePage {
@@ -52,7 +54,10 @@ public class BasePage {
         Assertions.assertEquals(url, element);
 
     }
-
+    //ожидание видимости элемента
+    public void BaseWaitVisibility(By elementBy, String text){
+        wait.until(ExpectedConditions.invisibilityOfElementWithText(elementBy, text));
+    }
 
     //Actions_end
 

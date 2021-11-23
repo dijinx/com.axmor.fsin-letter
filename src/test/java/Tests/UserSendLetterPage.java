@@ -105,4 +105,8 @@ public class UserSendLetterPage extends BasePage {
     public void pressButtonPayLetter() {
         BaseClick(By.xpath("//*[@class=\"ci_submit left\"]"));
     }
+    //проверка - письмо доставлено
+    public void checkLetterIsSend(){
+        BaseWaitVisibility(By.xpath("//*[contains(text(), \"Ваше письмо принято к доставке\")]"),"Ваше письмо принято к доставке");
+    }
 }
