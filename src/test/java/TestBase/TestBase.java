@@ -1,6 +1,7 @@
 package TestBase;
 
 import Tests.CensorAuthPage;
+import Tests.CensorCheckLetterPage;
 import Tests.UserSendLetterPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterEach;
@@ -23,6 +24,7 @@ public class TestBase { //конфиг для запускаемых тесто�
     //переменные страниц
     public CensorAuthPage CensorAuthPage;
     public UserSendLetterPage UserSendLetterPage;
+    public CensorCheckLetterPage CensorCheckLetterPage;
 
 
     //выполняется перед тестами
@@ -39,7 +41,8 @@ public class TestBase { //конфиг для запускаемых тесто�
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         //переменные страниц
         CensorAuthPage = PageFactory.initElements(driver, CensorAuthPage.class);
-        UserSendLetterPage = PageFactory.initElements(driver,UserSendLetterPage.class);
+        UserSendLetterPage = PageFactory.initElements(driver, UserSendLetterPage.class);
+        CensorCheckLetterPage = PageFactory.initElements(driver, CensorCheckLetterPage.class);
     }
 
     //выполняется после тестов
