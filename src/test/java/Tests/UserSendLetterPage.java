@@ -109,4 +109,11 @@ public class UserSendLetterPage extends BasePage {
     public void checkLetterIsSend(){
         BaseWaitVisibility(By.xpath("//*[contains(text(), \"Ваше письмо принято к доставке\")]"),"Ваше письмо принято к доставке");
     }
+    //забрать номер письма
+    public String getElementText(){
+        String text = BaseGetElementText(By.xpath("\"//lh[contains(text(),'565')]\""));
+        return text;
+    }
+    //получение номера письма
+
 }

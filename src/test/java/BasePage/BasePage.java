@@ -1,11 +1,9 @@
 package BasePage;
 
-import TestBase.TestBase;
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -57,6 +55,11 @@ public class BasePage {
     //ожидание видимости элемента
     public void BaseWaitVisibility(By elementBy, String text){
         wait.until(ExpectedConditions.invisibilityOfElementWithText(elementBy, text));
+    }
+    //забрать текст из элемента
+    public String BaseGetElementText(By elementBy){
+        String text = driver.findElement(elementBy).getText();
+        return text;
     }
 
     //Actions_end

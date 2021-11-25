@@ -23,8 +23,8 @@ public class UserSendLetterTest extends TestBase {
         page.enterLetterText();
         page.enterCardNumber();
         page.enterCardCode();
-        //page.loadPhoto();
-        //page.clickCheckBoxAnswer();
+        page.loadPhoto();
+        page.clickCheckBoxAnswer();
         Thread.sleep(2000);
         page.pressButtonSendLetter();
         page.pressButtonPayLetter();
